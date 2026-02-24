@@ -1,0 +1,35 @@
+# Python / 缓存
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# 虚拟环境
+.venv/
+venv/
+env/
+
+# 构建产物
+*.egg-info/
+dist/
+build/
+
+# 数据/模型/日志（按需调整）
+data/
+datasets/
+checkpoints/
+runs/
+logs/
+outputs/
+visheatmaps/
+pt_files/
+csv/
+results/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+/visheatmaps/
+/pt_files/

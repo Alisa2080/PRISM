@@ -1,0 +1,12 @@
+* text=auto eol=lf
+
+# 也明确常见文件都是 LF
+*.py  text eol=lf
+*.md  text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.sh  text eol=lf
+
+# Windows 批处理用 CRLF（如有）
+*.bat text eol=crlf

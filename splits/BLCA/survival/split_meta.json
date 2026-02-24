@@ -1,0 +1,16 @@
+{
+  "task": "survival",
+  "kfolds": 5,
+  "strategy": "kfold",
+  "train_ratio": null,
+  "seed": 7,
+  "label_col": "survival_months",
+  "censorship_col": "censorship",
+  "n_bins": 4,
+  "class_name_map": {
+    "0": "bin_0",
+    "1": "bin_1",
+    "2": "bin_2",
+    "3": "bin_3"
+  }
+}

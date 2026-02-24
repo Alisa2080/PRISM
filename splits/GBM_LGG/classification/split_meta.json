@@ -1,0 +1,15 @@
+{
+  "task": "classification",
+  "kfolds": 5,
+  "strategy": "kfold",
+  "train_ratio": null,
+  "seed": 7,
+  "label_col": "oncotree_code",
+  "censorship_col": "censorship",
+  "n_bins": null,
+  "class_name_map": {
+    "0": "Astrocytoma",
+    "1": "Glioblastoma",
+    "2": "Oligodendroglioma"
+  }
+}
