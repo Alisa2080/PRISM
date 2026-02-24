@@ -121,7 +121,7 @@ group.add_argument('--pack_pad_r', action='store_true', help='only for survival 
 group.add_argument('--min_seq_len', default=256, type=int, help='Minimum sequence length enforced after packing')
 group.add_argument('--pack_max_seq_len', default=3200, type=int, help='Maximum packed sequence length per bag')
 group.add_argument('--pack_residual_loss', default="focal", type=str, choices=['bce', 'ce', 'nll', 'asl_single', 'focal'])
-group.add_argument('--pack_downsample_mode', default="ads", type=str, choices=['none','ads'], help='Strategy used to downsample sequences inside PackMIL')
+group.add_argument('--pack_downsample_mode', default="ita", type=str, choices=['none','ita'], help='Strategy used to downsample sequences inside PackMIL')
 group.add_argument('--pack_downsample_type', default="random", type=str, choices=['random','max'], help='Random for subtype, max for survival. max is more easy to converge. Pooling') 
 group.add_argument('--pack_residual_ps_weight', action='store_true', help='Weight residual targets by the number of kept patches')
 group.add_argument('--pack_singlelabel', action='store_true', help='Treat residual supervision as single-label targets')

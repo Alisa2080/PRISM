@@ -6,7 +6,7 @@ from timm.loss import AsymmetricLossSingleLabel
 from pack.baseline import MILBase,MultimodalSAttention, SAttention
 from pack.pack_util import *
 from pack.packing import get_packs
-from pack.ita import ADS
+from pack.ita import ITA
 from pack.pack_loss import NLLSurvMulLoss, FocalLoss
 
 class PRISM(nn.Module):
@@ -43,8 +43,8 @@ class PRISM(nn.Module):
 		self.residual_ps_weight = residual_ps_weight
 		self.task = task
 		
-		if self.downsample_mode == 'ads':
-			self.downsampler = ADS(r=self.downsample_r,
+		if self.downsample_mode == 'ita':
+			self.downsampler = ITA(r=self.downsample_r,
 								   D=mil_kwargs.get('input_dim', 1024),
 								   _type=downsample_type
 								   )
