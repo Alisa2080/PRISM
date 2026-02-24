@@ -30,7 +30,7 @@ class DimensionDrop(torch.nn.Module):
             x = x.index_select(self.dim, keep_idx) * self.scaling
         return x
 
-class ADS(nn.Module):
+class ITA(nn.Module):
     """
     Downsample the input 3D tensor (B, T, D):
         1) First calculate the attention weight and weight the features

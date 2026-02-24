@@ -3,10 +3,10 @@ from torch import nn
 import numpy as np
 from timm.loss import AsymmetricLossSingleLabel
 
-from pack.pack_baseline import MILBase,MultimodalSAttention, SAttention
+from pack.baseline import MILBase,MultimodalSAttention, SAttention
 from pack.pack_util import *
 from pack.packing import get_packs
-from pack.ads import ADS
+from pack.ita import ADS
 from pack.pack_loss import NLLSurvMulLoss, FocalLoss
 
 class PRISM(nn.Module):

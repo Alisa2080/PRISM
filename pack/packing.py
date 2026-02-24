@@ -2,7 +2,7 @@ from functools import partial
 import torch
 from torch.nn.utils.rnn import pad_sequence as orig_pad_sequence
 from pack.pack_util import get_dropout, group_seqs
-from pack.ads import ADS
+from pack.ita import ITA
 from einops import rearrange, repeat
 import torch.nn.functional as F
 
@@ -102,7 +102,7 @@ def get_packs(x,
             feat_multi = feat_multi[rand_indices_2]
 
         if feat_single.numel() > (0 if all_pu else min_seq_len * _r) and seq_downsampler is not None:
-            if isinstance(seq_downsampler, ADS):
+            if isinstance(seq_downsampler, ITA):
                 feat_single_ds = seq_downsampler(feat_single.unsqueeze(0), shuffle=True,
                                                     downsample=len(feat_single) > min_seq_len * _r,
                                                     )
